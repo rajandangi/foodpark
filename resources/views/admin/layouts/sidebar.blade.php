@@ -9,12 +9,12 @@
     <ul class="navbar-nav navbar-right">
         <li class="dropdown"><a href="#" data-toggle="dropdown"
                 class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
-                <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div>
+                <img alt="image" src="{{ auth()->user()->avatar }}" class="rounded-circle mr-1">
+                <div class="d-sm-none d-lg-inline-block">Hi, {{ auth()->user()->name }}</div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-title">Logged in 5 min ago</div>
-                <a href="features-profile.html" class="dropdown-item has-icon">
+                <a href="{{ route('admin.profile') }}" class="dropdown-item has-icon">
                     <i class="far fa-user"></i> Profile
                 </a>
                 <a href="features-activities.html" class="dropdown-item has-icon">
@@ -34,14 +34,14 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="index.html">Food Park</a>
+            <a href="{{ route('admin.dashboard') }}">Food Park</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">FD</a>
+            <a href="{{ route('admin.dashboard') }}">FD</a>
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
-            <li class=active><a class="nav-link" href="index-0.html">
+            <li class=active><a class="nav-link" href="{{ route('admin.dashboard') }}">
                     <i class="fas fa-fire"></i> General Dashboard</a>
             </li>
             <li class="menu-header">Starter</li>
