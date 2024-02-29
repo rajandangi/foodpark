@@ -1,7 +1,7 @@
 <?php
 namespace App\Traits;
 
-use Request;
+use Illuminate\Http\Request;
 
 trait FileUploadTrait
 {
@@ -27,5 +27,7 @@ trait FileUploadTrait
             // Return the path of the image
             return $path . '/' . $imageName;
         endif;
+
+        return null;
     }
 }
