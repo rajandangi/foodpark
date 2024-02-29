@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\Route;
 |
 | Here is where you can register admin routes for your application. These
 | routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the ['web', 'auth', 'role:admin'] middleware group. Make something great!
+| be assigned to the ['web', 'auth', 'role:admin'] middleware group. 
+| In Simple terms, all the routes in this file can't be accessed without being logged in as an admin.
 |
 */
 
